@@ -8,6 +8,6 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 	$("#shipping-address2Field input").val(request.address2);
 	$("#shipping-cityField input").val(request.city);
 	$("#shipping-postalCodeField input").val(request.zip);
-	$("#shipping-phoneField input").val(request.phone);
+	$("#shipping-phoneField input").val(request.mulephone);
 	$("#shipping-stateField select").find('option[value="'+request.state+'"]').attr("selected",true);
 });
