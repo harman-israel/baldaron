@@ -10,7 +10,8 @@
 		    // That fires when a page's URL contains a 'g' ...
 			conditions: [
 			  new chrome.declarativeContent.PageStateMatcher({
-			    pageUrl: { hostEquals: 'www.harmanaudio.com' }
+			    pageUrl: { hostEquals: 'www.harmanaudio.com',
+			    		   pathContains: 'checkout'}
 			  })
 			],
 			// And shows the extension's page action.
