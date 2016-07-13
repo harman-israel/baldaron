@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.harmanaudio.com/checkout"],
-      "js": ["js/jquery-3.1.0.js","js/cs.js"]
+      "js": ["js/jquery-3.1.0.js","js/firebase.js","js/cs.js"]
     }
   ],
   "permissions": [
