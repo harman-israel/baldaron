@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "816664990244",
+    "firebase_url": "https://baldaron-4adb5.firebaseio.com",
+    "project_id": "baldaron-4adb5",
+    "storage_bucket": "baldaron-4adb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816664990244:android:f9ee301b20142e79",
+        "android_client_info": {
+          "package_name": "com.example.harman.baldaron"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816664990244-18c44fq3r06oje8f2hlvv7a0smmkofag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMF-QcEL4K5fDpX5FEXnEnoeMt-14zHXU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
