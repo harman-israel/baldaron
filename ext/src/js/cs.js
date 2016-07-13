@@ -42,7 +42,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 		// send notification
 		message = request.firstname + ", someone requests a delivery";
 		dataToSend = {"token":tokenKey,"user":userKey,"message":message};
-		//$.post(postUrl,dataToSend);
+		$.post(postUrl,dataToSend);
 	});
 	
 });
