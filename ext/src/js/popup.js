@@ -8,8 +8,9 @@ $.getJSON(baseurl+"users.json", function (userdata) {
 	  $.each( data, function( key, val ) {
 	  	mules[val.username] = val;
 	  	$.extend(mules[val.username],userdata[val.username]);
+	  	mules[val.username].muleid = key;
 	  	// populate the mules list
-
+	  	console.log(mules);
 		mulesArr = {"mules" : _.toArray(mules)};
 		var output = Mustache.render("{{#mules}} <tr><td><img src={{pic_url}} class='img-responsive'  style='max-height: 80px;'></td><td>{{firstname}}</td><td>{{lastname}}</td><td><button type='button' id='{{username}}' class='btn btn-lg btn-success'>Select</button></td></tr>{{/mules}}", mulesArr);
 		$("#content").html(output);	

@@ -27,7 +27,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 		var parcelData = {};
 		parcelData["description"] = $(".product-name a").attr("title");
 		parcelData["leecher"] = "sagiben";
-		parcelData["mule"] = request.username;
+		parcelData["mule"] = request.muleid;
 		parcelData["mule_usernam"] = request.username;
 		parcelData["purchase_date"] = new Date();
 		parcelData["status"] = "Pending";
