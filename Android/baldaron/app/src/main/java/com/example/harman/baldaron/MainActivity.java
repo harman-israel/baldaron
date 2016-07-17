@@ -1,5 +1,6 @@
 package com.example.harman.baldaron;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -11,14 +12,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 //import com.google.firebase.quickstart.database.models.User;
 //import com.google.firebase.quickstart.database.models.Post;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -54,14 +54,17 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(getApplicationContext(), AddFlight.class);
+                intent.putExtra("username", m_user);
+                startActivity(intent);
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                  //      .setAction("Action", null).show();
             }
         });
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        new DownloadFilesTask().execute();
+        new QueryTask().execute();
     }
 
 
@@ -81,13 +84,15 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    private class DownloadFilesTask extends AsyncTask<Void, Integer, String> {
+    private class QueryTask extends AsyncTask<Void, Integer, String> {
         protected String doInBackground(Void... urls) {
             try {
                 StringBuffer result = new StringBuffer();
@@ -106,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         private void PopulateText()
         {
             mainListView = (ListView) findViewById( R.id.listView );
-            
+
             try {
                 JSONObject reader = new JSONObject(json);
                 Iterator<String> iter = reader.keys();
@@ -128,6 +133,16 @@ public class MainActivity extends AppCompatActivity {
 
             mainListView = ( ListView ) findViewById(R.id.listView);
             mainListView.setAdapter(new ParcelListAdapter(getApplicationContext(), R.layout.listitem, parcel_list));
+
+            mainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    JSONObject obj = (JSONObject) parent.getItemAtPosition(position);
+                    Intent intent = new Intent(getApplicationContext(), ShowParcelActivity.class);
+                    intent.putExtra("parcel", obj.toString());
+                    startActivity(intent);
+                }
+            });
         }
 
 

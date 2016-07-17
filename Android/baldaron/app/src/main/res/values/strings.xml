@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Baldaron</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="title_activity_show_parcel">My Parcel</string>
+    <string name="title_activity_add_flight">AddFlight</string>
 </resources>

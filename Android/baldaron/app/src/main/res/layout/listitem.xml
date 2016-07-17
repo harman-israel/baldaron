@@ -31,21 +31,21 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/mule_details"
+        android:id="@+id/parcel_mule_details"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/name"
         android:textColor="#343434"
         android:textSize="20dip"
-        android:text="data"
+        android:text=""
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"  />
 
     <TextView
-        android:id="@+id/details"
+        android:id="@+id/purchase_date"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mule_details"
+        android:layout_below="@id/parcel_mule_details"
         android:textColor="#343434"
         android:textSize="20dip"
         android:text="data"
@@ -53,10 +53,10 @@
         android:layout_toRightOf="@+id/thumbnail"  />
 
     <TextView
-        android:id="@+id/status"
+        android:id="@+id/parcel_status"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/details"
+        android:layout_below="@id/purchase_date"
         android:textColor="#343434"
         android:textSize="20dip"
         android:text="data"

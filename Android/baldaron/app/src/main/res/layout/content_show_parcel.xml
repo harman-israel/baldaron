@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.harman.baldaron.ShowParcelActivity"
+    tools:showIn="@layout/activity_show_parcel">
+
+    <LinearLayout android:id="@+id/thumbnail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip">
+        <ImageView
+            android:id="@+id/parcel_image"
+            android:layout_width="80dip"
+            android:layout_height="80dip" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/parcel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail2"
+        android:layout_toRightOf="@+id/thumbnail2"
+        android:text="My Parcel"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="30dip"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/parcel_mule_fullname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thumbnail2"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="data"
+        android:layout_marginTop="1dip"/>
+
+    <TextView
+        android:id="@+id/parcel_mule_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/parcel_mule_fullname"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="data"
+        android:layout_marginTop="1dip" />
+
+    <TextView
+        android:id="@+id/purchase_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parcel_mule_phone"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="data"
+        android:layout_marginTop="1dip" />
+
+    <TextView
+        android:id="@+id/parcel_status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchase_date"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="data"
+        android:layout_marginTop="1dip"/>
+
+</RelativeLayout>

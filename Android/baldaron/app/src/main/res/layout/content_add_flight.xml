@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.harman.baldaron.AddFlight"
+    tools:showIn="@layout/activity_add_flight">
+
+    <LinearLayout android:id="@+id/thumbnail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip">
+        <ImageView
+            android:id="@+id/flitgh_image"
+            android:layout_width="80dip"
+            android:layout_height="80dip" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/parcel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail2"
+        android:layout_toRightOf="@+id/thumbnail2"
+        android:text="Create New Flight"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="30dip"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/address1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thumbnail2"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="Address 1:"
+        android:layout_marginTop="1dip"
+        android:layout_alignBottom="@+id/address1_edit" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address1_edit"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="30001 Cabot dr."
+        android:layout_below="@+id/thumbnail2"
+        android:layout_alignEnd="@+id/parcel_name" />
+
+    <TextView
+        android:id="@+id/address2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address1"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="Address 2:"
+        android:layout_marginTop="1dip" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address2_edit"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="Kukuriku"
+        android:layout_alignStart="@+id/address1_edit"
+        android:layout_above="@+id/city"
+        android:layout_alignEnd="@+id/address1_edit"
+        android:layout_below="@+id/address1" />
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="City: "
+        android:layout_below="@+id/address2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="State:"
+        android:layout_below="@+id/city"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/zip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="Zip:"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="Start date:"
+        android:layout_below="@+id/zip"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/end_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="End date:"
+        android:layout_below="@+id/start_date"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/handoff_date1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="Handoff date:"
+        android:layout_below="@+id/end_date"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/mule_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="Phone:"
+        android:layout_below="@+id/handoff_date1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="SouthField"
+        android:layout_below="@+id/address2"
+        android:layout_alignStart="@+id/address2_edit"
+        android:layout_above="@+id/state"
+        android:layout_alignEnd="@+id/address2_edit" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="MI"
+        android:layout_below="@+id/city"
+        android:layout_alignStart="@+id/editText"
+        android:layout_alignBottom="@+id/state"
+        android:layout_alignEnd="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="2016-08-01"
+        android:layout_alignBottom="@+id/start_date"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignEnd="@+id/start_date"
+        android:layout_below="@+id/zip" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="2016-08-08"
+        android:layout_alignBottom="@+id/end_date"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignEnd="@+id/end_date"
+        android:layout_below="@+id/start_date" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText5"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="2016-08-10"
+        android:layout_alignBottom="@+id/handoff_date1"
+        android:layout_alignStart="@+id/editText4"
+        android:layout_alignEnd="@+id/handoff_date1"
+        android:layout_below="@+id/end_date" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText6"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="248-356-7400"
+        android:layout_alignBottom="@+id/mule_phone"
+        android:layout_alignStart="@+id/editText5"
+        android:layout_alignEnd="@+id/mule_phone"
+        android:layout_below="@+id/handoff_date1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText7"
+        android:textColor="#343434"
+        android:textSize="20dip"
+        android:text="48033"
+        android:layout_alignBottom="@+id/zip"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignEnd="@+id/zip"
+        android:layout_below="@+id/state" />
+
+
+</RelativeLayout>
+
+

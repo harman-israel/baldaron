@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.URL;
@@ -43,14 +41,14 @@ public class ParcelListAdapter extends ArrayAdapter<JSONObject>{
             TextView muleName = (TextView) convertView.findViewById(R.id.name);
             muleName.setText(parcel.getString("description"));
 
-            TextView details = (TextView) convertView.findViewById(R.id.details);
+            TextView details = (TextView) convertView.findViewById(R.id.purchase_date);
             String txt = parcel.getString("purchase_date");
             details.setText(txt);
 
-            TextView mule_details = (TextView) convertView.findViewById(R.id.mule_details);
-            mule_details.setText(parcel.getString("mule"));
+            //TextView mule_details = (TextView) convertView.findViewById(R.id.mule_details);
+            //mule_details.setText(parcel.getString("mule"));
 
-            TextView status = (TextView) convertView.findViewById(R.id.status);
+            TextView status = (TextView) convertView.findViewById(R.id.parcel_status);
             String strStatus = parcel.getString("status");
             status.setText(strStatus);
             if (strStatus.toLowerCase().equals("paid")) {
